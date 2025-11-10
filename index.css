@@ -1,0 +1,156 @@
+:root {
+  --bg: #121317;
+  --panel: #1b1d23;
+  --panel-2: #20232b;
+  --text: #e8e9ed;
+  --muted: #a7abba;
+  --brand: #e53e3e;
+  --border: #2a2e37;
+  --radius: 14px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* Header */
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background: #14161b;
+  border-bottom: 1px solid var(--border);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+}
+
+.logo-badge {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  background: var(--brand);
+  color: white;
+  display: grid;
+  place-items: center;
+  font-weight: 900;
+}
+
+nav {
+  display: flex;
+  gap: 15px;
+  flex: 1;
+  justify-content: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--muted);
+  font-weight: 600;
+  padding: 8px 10px;
+  border-radius: 6px;
+}
+
+nav a.active,
+nav a:hover {
+  color: #fff;
+  background: var(--panel);
+}
+
+
+
+/* Page Content */
+.container {
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.page-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: var(--panel-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px;
+  transition: 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: #3a3f4c;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.badge {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  color: white;
+  font-weight: 700;
+}
+
+.badge.blue { background: #3b82f6; }
+.badge.amber { background: #f59e0b; }
+.badge.green { background: #10b981; }
+.badge.pink { background: #ec4899; }
+.badge.red {background-color: #e53e3e;}
+
+.desc {
+  color: var(--muted);
+  margin: 10px 0 20px;
+}
+
+.link {
+  color: #60a5fa;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.card.dragover {
+  outline: 2px dashed #9ca3af;
+  outline-offset: -6px;
+}
+
+.hint {
+  margin-top: 25px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+

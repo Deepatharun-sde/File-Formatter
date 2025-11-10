@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adobe Acrobat Convert</title>
+  <link rel="stylesheet" href="./index.css">
+
+  <!-- PDF.js (must be before your script) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js" defer></script>
+
+  <script defer>
+    window.pdfjsLib = window['pdfjs-dist/build/pdf'];
+    pdfjsLib.GlobalWorkerOptions.workerSrc =
+      "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
+  </script>
+
+  <!-- Your app script -->
+  <script src="index.js" defer></script>
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="logo" aria-label="Adobe Acrobat">
+      <div class="logo-badge">A</div>
+      <div>Adobe Acrobat</div>
+    </div>
+
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">PDF Spaces</a>
+      <a href="#">Documents</a>
+      <a href="#">Edit</a>
+      <a class='active' href="#">Convert</a>
+      <a href="#">E-sign</a>
+      <a href="#">All tools</a>
+    </nav>
+
+   
+  </header>
+
+  <main class="container">
+    <h2 class="page-title">Convert</h2>
+
+    <div class="grid" id="toolGrid">
+      <article class="card" data-accepts=".pdf">
+        <div>
+          <div class="head">
+            <div class="badge blue">W</div>
+            <div class="title">PDF to Word</div>
+          </div>
+          <p class="desc">Convert PDFs to Microsoft Word files</p>
+        </div>
+        <p><label class="link">Drag and drop, or <span class="select-file" role="button" tabindex="0">select a file</span></label></p>
+      </article>
+
+      <article class="card" data-accepts=".pdf">
+        <div>
+          <div class="head">
+            <div class="badge amber">P</div>
+            <div class="title">PDF to PPT</div>
+          </div>
+          <p class="desc">Convert PDFs to Microsoft PowerPoint files</p>
+        </div>
+        <p><label class="link">Drag and drop, or <span class="select-file" role="button" tabindex="0">select a file</span></label></p>
+      </article>
+
+      <article class="card" data-accepts=".pdf">
+        <div>
+          <div class="head">
+            <div class="badge green">X</div>
+            <div class="title">PDF to Excel</div>
+          </div>
+          <p class="desc">Convert PDFs to Microsoft Excel files</p>
+        </div>
+        <p><label class="link">Drag and drop, or <span class="select-file" role="button" tabindex="0">select a file</span></label></p>
+      </article>
+
+      <!-- PDF to JPG: mark this card with data-tool -->
+      <article class="card" data-accepts=".pdf" data-tool="pdf-to-jpg">
+        <div>
+          <div class="head">
+            <div class="badge pink">IMG</div>
+            <div class="title">PDF to JPG</div>
+          </div>
+          <p class="desc">Convert PDFs to JPG or other image formats</p>
+        </div>
+        <p><label class="link">Drag and drop, or <span class="select-file" role="button" tabindex="0">select a file</span></label></p>
+      </article>
+
+     
+
+      <article class="card" data-accepts=".pdf" data-tool="pdf-to-jpg">
+        <div>
+          <div class="head">
+            <div class="badge blue">W</div>
+            <div class="title">Word to PDF</div>
+          </div>
+          <p class="desc">Convert Microsoft Word files to PDF</p>
+        </div>
+        <p><label class="link">Drag and drop, or <span class="select-file" role="button" tabindex="0">select a file</span></label></p>
+      </article>
+
+      <article class="card" data-accepts=".pdf" data-tool="pdf-to-jpg">
+        <div>
+          <div class="head">
+            <div class="badge amber">P</div>
+            <div class="title">PPT to PDF</div>
+          </div>
+          <p class="desc">Convert Microsoft PowerPoint files to PDF</p>
+        </div>
+        <p><label class="link">Drag and drop, or <span class="select-file" role="button" tabindex="0">select a file</span></label></p>
+      </article>
+
+      <article class="card" data-accepts=".pdf" data-tool="pdf-to-jpg">
+        <div>
+          <div class="head">
+            <div class="badge green">X</div>
+            <div class="title">Excel to PDF</div>
+          </div>
+          <p class="desc">Convert Microsoft Excel files to PDF</p>
+        </div>
+        <p><label class="link">Drag and drop, or <span class="select-file" role="button" tabindex="0">select a file</span></label></p>
+      </article>
+
+
+      <article class="card" data-accepts=".pdf" data-tool="pdf-to-jpg">
+        <div>
+          <div class="head">
+            <div class="badge pink">IMG</div>
+            <div class="title">JPG to PDF</div>
+          </div>
+          <p class="desc">Convert JPG,PNG and other images to PDF </p>
+        </div>
+        <p><label class="link">Drag and drop, or <span class="select-file" role="button" tabindex="0">select a file</span></label></p>
+      </article>
+
+       <article class="card" data-accepts=".pdf" data-tool="pdf-to-jpg">
+        <div>
+          <div class="head">
+            <div class="badge red">E</div>
+            <div class="title">Export a PDF</div>
+          </div>
+          <p class="desc">Convert PDFs to Microsoft Office files,images,and more</p>
+        </div>
+        <p><label class="link">Drag and drop, or <span class="select-file" role="button" tabindex="0">select a file</span></label></p>
+      </article>
+
+      <article class="card" data-accepts=".pdf" data-tool="pdf-to-jpg">
+        <div>
+          <div class="head">
+            <div class="badge red">C</div>
+            <div class="title">Convert to PDF</div>
+          </div>
+          <p class="desc">Turn almost any files into PDF</p>
+        </div>
+        <p><label class="link">Drag and drop, or <span class="select-file" role="button" tabindex="0">select a file</span></label></p>
+      </article>
+
+      <article class="card" data-accepts=".pdf" data-tool="pdf-to-jpg">
+        <div>
+          <div class="head">
+            <div class="badge red">COM</div>
+            <div class="title">Compress to PDF</div>
+          </div>
+          <p class="desc">Reduce the size of your PDF for easier sharing</p>
+        </div>
+        <p><label class="link">Drag and drop, or <span class="select-file" role="button" tabindex="0">select a file</span></label></p>
+      </article>
+
+      <article class="card" data-accepts=".pdf" data-tool="pdf-to-jpg">
+        <div>
+          <div class="head">
+            <div class="badge red">R</div>
+            <div class="title">Recognize text with OCR</div>
+          </div>
+          <p class="desc">Make text in your PDF searchable and editable</p>
+        </div>
+        <p><label class="link">Drag and drop, or <span class="select-file" role="button" tabindex="0">select a file</span></label></p>
+      </article>
+
+      
+    </div>
+
+    <input type="file" id="filePicker" hidden>
+  </main>
+</body>
+</html>
